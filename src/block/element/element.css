@@ -1,0 +1,7 @@
+.element {
+  min-height: 200px;
+  min-width: 200px;
+  border-radius: 10px;
+  max-height: 361px;
+  position: relative;
+}

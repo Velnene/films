@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import {React, useEffect, useState } from "react";
+import Header from "./components/header";
+import Main from "./components/Main";
+import api from "./utils/api";
 
 function App() {
+  const [films, getFilms] = useState([]);
+  
+  useEffect(() => {
+    api.getFilm()
+      .then((res) => {  
+        getFilms(res.films);
+      }).catch((err) => {
+        alert(err);
+      });
+  },[])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Header />
+      <Main
+    films={films}
+      />
+  </>
   );
 }
 
