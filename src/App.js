@@ -17,6 +17,9 @@ function App() {
   }, [])
 
   function serchFilm(word) {
+    if (word === '') {
+      return
+    }
     api.serchFilm(word)
       .then((res) => {
         getFilms(res.films)
