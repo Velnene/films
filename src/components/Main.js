@@ -8,13 +8,11 @@ function Main(props) {
 
     <>
       <section className="elements">
-        <button />
-        <section className="element">
           {props.films.map((film) => (
             <Card 
-            film={film}/>
+              film={film}
+              key={film.filmId}/>
           ))}
-        </section>
       </section>
     </>
   )

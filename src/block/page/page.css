@@ -1,0 +1,11 @@
+.page {
+  padding-top: 45px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #1c0808;
+  align-items: center;
+  font-family: 'Inter', Arial, sans-serif;
+  -webkit-font-smooting: antialiased;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
