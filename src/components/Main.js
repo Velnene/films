@@ -10,6 +10,7 @@ function Main(props) {
       <section className="elements">
           {props.films.map((film) => (
             <Card 
+              handleCardClick={props.handleCardClick}
               film={film}
               key={film.filmId}/>
           ))}
