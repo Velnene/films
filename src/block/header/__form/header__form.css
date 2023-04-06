@@ -1,0 +1,6 @@
+.header__form{
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}

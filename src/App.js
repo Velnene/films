@@ -6,15 +6,18 @@ import api from "./utils/api";
 function App() {
   const [films, getFilms] = useState([]);
 
-
   useEffect(() => {
+    getFilm();
+  }, [])
+
+  function getFilm() {
     api.getFilm()
       .then((res) => {
         getFilms(res.films);
       }).catch((err) => {
         alert(err);
       });
-  }, [])
+  }
 
   function serchFilm(word) {
     if (word === '') {
@@ -33,10 +36,10 @@ function App() {
     <div className="page">
       <div className="page__container">
         <Header
+          getFilm={getFilm}
           getSerchFilm={serchFilm}
         />
         <Main
-         
           films={films}
         />
       </div>

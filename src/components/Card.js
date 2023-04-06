@@ -1,7 +1,6 @@
 import React from 'react';
 
 function Card(props) {
-  console.log(props.film)
   return (
     <div id="element-template">
       <article className="element">

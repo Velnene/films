@@ -37,10 +37,8 @@ export class Api {
           return Promise.reject(`Ошибка: ${res.status}`);
         }
       })
- }
-
+  }
 }
 
 const api = new Api();
-
 export default api;

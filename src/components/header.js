@@ -17,11 +17,17 @@ function Header(props) {
     getValue(e.target.value)
   }
 
+  function getFilm() {
+    getValue('');
+    props.getFilm();
+  }
+
   return (
     <header className="header">
-      <div className='header__logo'>Header</div>
-      <form onSubmit={handleSubmit}>
+      <div className='header__logo'>Films</div>
+      <form className='header__form' onSubmit={handleSubmit}>
         <input value={value} onChange={handleChange} type='text' placeholder='Поиск' className='header__search' />
+        <button onClick={getFilm} className='header__top-films'>Топ 20 фильмов</button>
       </form>
     </header>
   )

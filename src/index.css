@@ -4,8 +4,12 @@
 @import url('./block/element/__footer/element__footer.css');
 @import url('./block/element/__image/element__image.css');
 @import url('./block/element/__name/element__name.css');
-
+/*header*/
 @import url('./block/header/header.css');
+@import url('./block/header/__logo/header__logo.css');
+@import url('./block/header/__form/header__form.css');
+@import url('./block/header/__top-films/header__top-films.css');
+@import url('./block/header/__search/header__search.css');
 
 @import url('./block/page/page.css');
 @import url('./block/page/__container/page__container.css');
